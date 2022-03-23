@@ -13,11 +13,24 @@ const Home: NextPage = () => {
     new Client('Camila', 23, '4'),
   ]
 
+  function selectedClient(client: Client) {
+    console.log(client.getName());
+    
+  }
+  
+  function deletedClient(client: Client) {
+    console.log(client.getAge());
+    
+  }
+
   return (
     <div className='flex justify-center items-center h-screen bg-gradient-to-r from-blue-500 to-purple-500 text-white'>
 
       <Layout title='Cadastro Simples'>
-        <Table clients={clients}></Table>
+        <Table clients={clients} 
+               selectedClient={selectedClient} 
+               deletedClient={deletedClient}>
+        </Table>
       </Layout>
 
     </div>
