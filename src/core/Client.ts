@@ -22,7 +22,7 @@ export default class Client {
         return this.name;
     }
 
-    getAame() {
+    getAge() {
         return this.age;
     }
 }
