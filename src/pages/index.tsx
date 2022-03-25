@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Button from '../components/Button'
+import Form from '../components/Form'
 
 import Layout from '../components/Layout'
 import Table from '../components/Table'
@@ -15,12 +16,12 @@ const Home: NextPage = () => {
   ]
 
   function selectedClient(client: Client) {
-    console.log(client.getName());
+    console.log(client.name);
     
   }
   
   function deletedClient(client: Client) {
-    console.log(client.getAge());
+    console.log(client.age);
     
   }
 
@@ -29,13 +30,15 @@ const Home: NextPage = () => {
 
       <Layout title='Cadastro Simples'>
         <div className='flex justify-end'>
-          <Button className='mb-4' color='blue'>Novo cliente</Button>
+          <Button className='mb-4' color='green'>Novo cliente</Button>
         </div>
 
         <Table clients={clients} 
                selectedClient={selectedClient} 
                deletedClient={deletedClient}
         />
+
+        <Form client={clients[0]}/>
       </Layout>
 
     </div>

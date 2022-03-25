@@ -25,10 +25,10 @@ export default function Table(props: TableProps) {
     function renderData() {
         return props.clients?.map((client: Client, i: number) => {
             return (
-                <tr key={client.getId()} className={`${i % 2 === 0 ? 'bg-purple-100' : 'bg-purple-200' }`}>
-                    <td className='text-left px-4 py-2'>{client.getId()}</td>
-                    <td className='text-left px-4 py-2'>{client.getName()}</td>
-                    <td className='text-left px-4 py-2'>{client.getAge()}</td>
+                <tr key={client.id} className={`${i % 2 === 0 ? 'bg-purple-100' : 'bg-purple-200' }`}>
+                    <td className='text-left px-4 py-2'>{client.id}</td>
+                    <td className='text-left px-4 py-2'>{client.name}</td>
+                    <td className='text-left px-4 py-2'>{client.age}</td>
                     {showActions ? renderActions(client) : false}
                 </tr>
             );

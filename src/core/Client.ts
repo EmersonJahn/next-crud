@@ -1,8 +1,8 @@
 export default class Client {
 
-    private id?: string;
-    private name: string;
-    private age: number;
+    public id?: string;
+    public name: string;
+    public age: number;
 
     constructor (name: string, age: number, id?: string) {
         this.id   = id;
@@ -14,15 +14,15 @@ export default class Client {
         return new Client('', 0);
     }
 
-    getId() {
-        return this.id;
-    }
+    // getId() {
+    //     return this.id;
+    // }
 
-    getName() {
-        return this.name;
-    }
+    // getName() {
+    //     return this.name;
+    // }
 
-    getAge() {
-        return this.age;
-    }
+    // getAge() {
+    //     return this.age;
+    // }
 }

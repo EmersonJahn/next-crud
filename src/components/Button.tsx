@@ -1,5 +1,5 @@
 interface ButtonProps {
-    color?: 'green' | 'blue' | 'gray';
+    color?: 'green' | 'blue' | 'gray' | 'red';
     className?: string;
     children: any;
 }
