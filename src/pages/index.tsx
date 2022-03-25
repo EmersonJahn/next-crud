@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Button from '../components/Button'
 
 import Layout from '../components/Layout'
 import Table from '../components/Table'
@@ -27,10 +28,14 @@ const Home: NextPage = () => {
     <div className='flex justify-center items-center h-screen bg-gradient-to-r from-blue-500 to-purple-500 text-white'>
 
       <Layout title='Cadastro Simples'>
+        <div className='flex justify-end'>
+          <Button className='mb-4' color='blue'>Novo cliente</Button>
+        </div>
+
         <Table clients={clients} 
                selectedClient={selectedClient} 
-               deletedClient={deletedClient}>
-        </Table>
+               deletedClient={deletedClient}
+        />
       </Layout>
 
     </div>
