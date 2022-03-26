@@ -1,4 +1,4 @@
-import { firestore, collection, deleteDoc, doc, addDoc, setDoc, getDocs } from "../config";
+import { firestore, collection, deleteDoc, doc, addDoc, setDoc, getDocs } from "../firestore-service";
 
 import Client from "../../core/Client";
 import ClientRepository from "../../core/ClientRepository";
@@ -12,7 +12,7 @@ export default class ClientCollection implements ClientRepository {
                 age: client.age,
             }
         },
-        fromFirestore(snapshot: firestore.QueryDocumentSnapshot, options?: firestore.SnapshotOptions): Client {
+        fromFirestore(snapshot: QueryDocumentSnapshot, options?: SnapshotOptions): Client {
             const data = snapshot.data();
             return new Client(data.name, data.age, snapshot.id);
         }
@@ -35,7 +35,6 @@ export default class ClientCollection implements ClientRepository {
     }
 
     async delete(client: Client): Promise<void> {
-        // return await this.clientColletion().doc(client.id).delete();
         return await deleteDoc(this.clientDoc(client));
     }
 
