@@ -1,34 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NEXT CRUD CLIENT
 
-## Getting Started
+<br>
 
-First, run the development server:
+## Application developed in the course [Curso React + Redux: Fundamentos e 2 Apps do Absoluto ZERO!](https://www.udemy.com/course/react-redux-pt/).
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies used:
+- React.js/Next.js
+- Typescript
+- Tailwind CSS
+- Firebase
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<br>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## To run this project you must:
+### - Install and configure:
+- [Node.js] (https://nodejs.org/en/) - needed to install Next.js
+- [Next.js] (https://nextjs.org/)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Run the project:
+Run `npm run dev` for a dev server. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
+<br>
 
-To learn more about Next.js, take a look at the following resources:
+## Screens:
+<table style="border:0">
+<tr>
+<td>
+<div>
+Clients
+<img src="./src/assets/images/screens/clients.png" alt="Clients"/>
+</div>
+</td>
+<td>
+<div>
+New Client
+<img src="./src/assets/images/screens/new-client.png" alt="New Client"/>
+</div>
+</td>
+<td>
+<div>
+Edit Client
+<img src="./src/assets/images/screens/edit-client.png" alt="Edit Client"/>
+</div>
+</td>
+</tr>
+</table>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br>
+<br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Developed by
 
-## Deploy on Vercel
+<table style="border:0">
+<tr>
+<td>
+<a href="https://github.com/EmersonJahn">
+<img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/68763696?s=400&u=c823bbab5b472417b5d7883037989fd503be07c2&v=4" width="100px">
+<br>
+<sub><b>Emerson Jahn</b></sub></a> <a href="https://github.com/EmersonJahn" title="GitHub"></a>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![GitHub Badge](https://img.shields.io/badge/-black?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/EmersonJahn//)](https://github.com/EmersonJahn/) 
+[![Linkedin Badge](https://img.shields.io/badge/-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/emerson-jahn-76285a180//)](https://www.linkedin.com/in/emerson-jahn/) 
+[![Instagram Badge](https://img.shields.io/badge/-blueviolet?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/emerson_jahn//)](https://www.instagram.com/emerson_jahn) 
+[![Gmail Badge](https://img.shields.io/badge/-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:emersonajahn.com)](mailto:emersonajahn@gmail.com)
+</td>
+</tr>
+</table>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
