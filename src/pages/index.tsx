@@ -17,10 +17,11 @@ const Home: NextPage = () => {
   ]
 
   const [visible, setVisible] = useState<'table' | 'form'>('table');
+  const [client, setClient]   = useState<Client>(Client.emptyClient());
 
   function selectedClient(client: Client) {
-    console.log(client.name);
-    
+    setClient(client);
+    setVisible('form');
   }
   
   function deletedClient(client: Client) {
@@ -30,7 +31,12 @@ const Home: NextPage = () => {
 
   function saveClient(client: Client) {
     console.log('saveClient', client);
+    setVisible('table');
+  }
 
+  function newClient() {
+    setClient(Client.emptyClient());
+    setVisible('form');
   }
 
   return (
@@ -42,7 +48,7 @@ const Home: NextPage = () => {
           ?
             <>
               <div className='flex justify-end'>
-                <Button className='mb-4' color='green' onClick={() => setVisible('form')}>Novo cliente</Button>
+                <Button className='mb-4' color='green' onClick={newClient}>Novo cliente</Button>
               </div>
 
               <Table clients={clients}
@@ -51,7 +57,7 @@ const Home: NextPage = () => {
               />
             </>
           :
-            <Form client={clients[0]} canceled={() => setVisible('table')} changedClient={saveClient}/>
+            <Form client={client} canceled={() => setVisible('table')} changedClient={saveClient}/>
         }
 
       </Layout>
