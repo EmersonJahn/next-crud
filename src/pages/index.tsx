@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import { useState } from 'react'
 import Button from '../components/Button'
 import Form from '../components/Form'
 
@@ -15,6 +16,8 @@ const Home: NextPage = () => {
     new Client('Camila', 23, '4'),
   ]
 
+  const [visible, setVisible] = useState<'table' | 'form'>('table');
+
   function selectedClient(client: Client) {
     console.log(client.name);
     
@@ -25,20 +28,32 @@ const Home: NextPage = () => {
     
   }
 
+  function saveClient(client: Client) {
+    console.log('saveClient', client);
+
+  }
+
   return (
     <div className='flex justify-center items-center h-screen bg-gradient-to-r from-blue-500 to-purple-500 text-white'>
 
       <Layout title='Cadastro Simples'>
-        <div className='flex justify-end'>
-          <Button className='mb-4' color='green'>Novo cliente</Button>
-        </div>
 
-        <Table clients={clients} 
-               selectedClient={selectedClient} 
-               deletedClient={deletedClient}
-        />
+        {visible == 'table'
+          ?
+            <>
+              <div className='flex justify-end'>
+                <Button className='mb-4' color='green' onClick={() => setVisible('form')}>Novo cliente</Button>
+              </div>
 
-        <Form client={clients[0]}/>
+              <Table clients={clients}
+                selectedClient={selectedClient}
+                deletedClient={deletedClient}
+              />
+            </>
+          :
+            <Form client={clients[0]} canceled={() => setVisible('table')} changedClient={saveClient}/>
+        }
+
       </Layout>
 
     </div>
