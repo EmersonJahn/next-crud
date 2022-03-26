@@ -33,12 +33,16 @@ Clients
 <img src="./src/assets/images/screens/clients.png" alt="Clients"/>
 </div>
 </td>
+</tr>
+<tr>
 <td>
 <div>
 New Client
 <img src="./src/assets/images/screens/new-client.png" alt="New Client"/>
 </div>
 </td>
+</tr>
+<tr>
 <td>
 <div>
 Edit Client
