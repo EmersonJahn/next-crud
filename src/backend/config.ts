@@ -2,7 +2,7 @@
 // import { Firestore } from "firebase/firestore"
 
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore/lite';
+import { getFirestore, collection, deleteDoc, doc, addDoc, setDoc, getDocs } from 'firebase/firestore/lite';
 
 // if (!firebase.apps.length) {
 //     firebase.initializeApp({
@@ -20,4 +20,4 @@ const firebase = initializeApp({
 
 const firestore = getFirestore(firebase);
 
-export { firebase, firestore };
+export { firebase, firestore, collection, deleteDoc, doc, addDoc, setDoc, getDocs };
